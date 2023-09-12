@@ -11,11 +11,11 @@ const getAllTasks = async (req, res) => {
   }
 };
 
-const getTaskById = async (req, res) => {
+const getTaskByUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const task = await Task.findOne({
-      where: { id },
+    const task = await Task.findAll({
+      where: { userId: id },
     });
     res.json(task);
   } catch (error) {
@@ -61,4 +61,4 @@ const updateTask = async (req, res) => {
   }
 };
 
-export { getAllTasks, getTaskById, createTask, deleteTask, updateTask };
+export { getAllTasks, getTaskByUser, createTask, deleteTask, updateTask };
