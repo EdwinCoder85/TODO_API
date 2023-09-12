@@ -11,7 +11,7 @@ const db = new Sequelize({
   // ...(process.env.NOD_ENV = "production"
   //   ? { dialecOptions: { ssl: { required: true, rejectUnauthorize: false }}}
   //   : {}),
-  dialecOptions: { ssl: { required: true, rejectUnauthorize: false }},
+  // dialecOptions: { ssl: { required: true, rejectUnauthorize: false }},
 });
 
 export default db;
